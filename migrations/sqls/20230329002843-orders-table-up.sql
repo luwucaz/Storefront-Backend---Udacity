@@ -1,0 +1,8 @@
+CREATE TABLE Orders (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    order_status VARCHAR(10) NOT NULL,
+    total_price INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
